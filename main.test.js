@@ -20,3 +20,25 @@ test('Kiểm thử hàm getDiscountPercentage bằng giá trị biên', () => {
   expect(getDiscountPercentage(10000)).toEqual(18);
   expect(() => getDiscountPercentage(10001)).toThrow(Error);
 });
+
+test('Kiểm thử hàm getDiscountPercentage bằng kiểm thử luồng điều khiển với độ đo C2', () => {
+  expect(() => getDiscountPercentage('hello')).toThrow(Error);
+  expect(() => getDiscountPercentage(15000)).toThrow(Error);
+  expect(getDiscountPercentage(500)).toEqual(0);
+  expect(getDiscountPercentage(1500)).toEqual(5);
+  expect(getDiscountPercentage(3500)).toEqual(8);
+  expect(getDiscountPercentage(6800)).toEqual(12);
+  expect(getDiscountPercentage(7200)).toEqual(15);
+  expect(getDiscountPercentage(9000)).toEqual(18);
+});
+
+test('Kiểm thử hàm getDiscountPercentage bằng kiểm thử luồng dữ liệu với độ phủ all-uses', () => {
+  expect(() => getDiscountPercentage('hello')).toThrow(Error);
+  expect(() => getDiscountPercentage(15000)).toThrow(Error);
+  expect(getDiscountPercentage(500)).toEqual(0);
+  expect(getDiscountPercentage(1500)).toEqual(5);
+  expect(getDiscountPercentage(3500)).toEqual(8);
+  expect(getDiscountPercentage(6800)).toEqual(12);
+  expect(getDiscountPercentage(7200)).toEqual(15);
+  expect(getDiscountPercentage(9000)).toEqual(18);
+});
