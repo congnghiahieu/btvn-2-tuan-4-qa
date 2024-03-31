@@ -25,5 +25,9 @@ npm run test
 
 Lưu ý:
 
-- File `main.js` chứa cài đặt của hàm `getDiscountPercentage`
-- File `main.test.js` chứa test script của hàm `getDiscountPercentage` theo 2 phương pháp: _kiểm thử bảng quyết định_ và _kiểm thử biên_
+- File `main.js` chứa cài đặt của hàm `getFinalPrice`
+- File `main.test.js` chứa test script của hàm `getFinalPrice` theo các phương pháp:
+  - _kiểm thử bảng quyết định_
+  - _kiểm thử biên_
+  - _kiểm thử bằng luồng điều khiển với độ phủ C2_
+  - _kiểm thử bằng luồng dữ liệu với độ phủ all-uses_
